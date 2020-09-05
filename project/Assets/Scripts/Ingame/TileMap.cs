@@ -23,7 +23,7 @@ public class TileMap : MonoBehaviour
 				var layer = new Dictionary<int, Tile>();
 				var base_layer = m_TileCatalog.TileLayers[0];
 				var tile = Instantiate(base_layer.Tiles[Random.Range(0, base_layer.Tiles.Count)], transform);
-				tile.transform.localPosition = new Vector3(m_TileSize * y, 0.0f, m_TileSize * x);
+				tile.transform.localPosition = new Vector3(m_TileSize * x, m_TileSize * y);
 				tile.name = $"TILE:{x}_{y}";
 				tile.Setup(x, y);
 
